@@ -1,0 +1,20 @@
+[package]
+name = "spermbank"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anvil-region = "0.8"
+anyhow = "1"
+clap = { version = "4.3", features = ["derive", "cargo"] }
+humansize = { version = "2", features = ["impl_style"] }
+named-binary-tag = "0.6"
+tracing = "0.1"
+tracing-panic = "0.1"
+tracing-subscriber = "0.3"
+zstd = "0.12"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
